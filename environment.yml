@@ -1,14 +1,45 @@
 name: miba-hackathon
 channels:
   - conda-forge
+
 dependencies:
+  # Core
   - python=3.12
   - pip
   - ipykernel
-  - pytest=8.4.2
-  - pytest-cov=7.0.0
+  - nbformat
+  - notebook
+  - jupyterlab
+
+  # Data handling
   - pandas=2.2.3
   - numpy=2.1.2
+  - scipy
+  - pyarrow
+  - openpyxl
+
+  # ML basics
   - scikit-learn=1.5.2
+  - imbalanced-learn
+  - statsmodels
+
+  # Tree and boosting models
+  - xgboost
+  - lightgbm
+
+  # Visualisation
+  - matplotlib
   - plotly=5.24.0
-  - nbformat
+  - seaborn
+
+  # Utilities
+  - tqdm
+  - joblib
+
+  # Testing
+  - pytest=8.4.2
+  - pytest-cov=7.0.0
+
+  # Optional extra models via pip
+  - pip:
+      - catboost
